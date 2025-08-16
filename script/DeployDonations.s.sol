@@ -32,10 +32,10 @@ contract DeployDonations is Script, CodeConstants{
             CreateSubscription createSubscription = new CreateSubscription();
             (config.subId, config.vrfCoordinator) = createSubscription.run();
             
+        }
             FundSubscription fundSubscription = new FundSubscription();
             fundSubscription.fundSubscription(config.subId, config.vrfCoordinator, config.account, config.linkToken);
             helperConfig.setConfig(block.chainid, config);
-        }
 
         // Deploy the Donations contract as the configured deployer account
         vm.startBroadcast(config.account);

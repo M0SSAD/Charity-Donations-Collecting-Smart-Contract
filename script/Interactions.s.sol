@@ -84,7 +84,7 @@ contract FundSubscription is Script, CodeConstants {
         if(block.chainid == LOCAL_CHAIN_ID){
             // On local chain the mock coordinator exposes a direct fund API useful for tests
             vm.startBroadcast(account);
-            VRFCoordinatorV2_5Mock(vrfCoordinator).fundSubscription(subId, FUND_AMOUNT * 100);
+            VRFCoordinatorV2_5Mock(vrfCoordinator).fundSubscription(subId, FUND_AMOUNT);
             vm.stopBroadcast();
         } else {
             // On testnets/mainnet we fund by transferring LINK tokens to the coordinator

@@ -6,9 +6,11 @@ lib/openzeppelin-contracts
 lib/solmate
 cache/
 out/
+frontend/
 
 # Ignore development broadcast logs but keep top-level /broadcast directory tracked
 !/broadcast
+/broadcast
 /broadcast/*/31337/
 /broadcast/**/dry-run/
 

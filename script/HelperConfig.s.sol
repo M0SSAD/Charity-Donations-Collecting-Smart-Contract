@@ -57,10 +57,10 @@ contract HelperConfig is Script, CodeConstants{
     /// @dev This method is pure because it returns hard-coded values; replace subId with real one
     function getSepoliaEthConfig() public pure returns (NetworkConfig memory) {
         return NetworkConfig({
-            keyHash: 0x787d74caea10b2b357790d5b5247c2f63d1d91572a9846f780606e4d953677ae,
-            subId: 0, // Get From The Deployed Subscription On Chainlink.
+            keyHash: 0x8e7a847ba0757d1c302a3f0fde7b868ef8cf4acc32e48505f1a1d53693a10a19,
+            subId: 110916020856646899031195138903605165833086919485804504417490583887951139748860, // Get From The Deployed Subscription On Chainlink.
             vrfCoordinator: 0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B,
-            callbackGasLimit: 2500000,
+            callbackGasLimit: 100000,
             interval: 30,
             linkToken: 0x779877A7B0D9E8603169DdbD7836e478b4624789,
             account: 0x462509039F9b54cDD61B24CEcCeC3013FC3af1ec
